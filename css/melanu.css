@@ -86,7 +86,7 @@
   gap: 10px;
 }
 .melanu-services-row .project-svc-item svg {
-  color: rgba(255,255,255,0.7);
+  color: #0A0A0A;
   width: 28px;
   height: 28px;
 }
@@ -261,7 +261,7 @@
   background: #c99b76;
 }
 [data-brand="glamlaunch"] .melanu-services-row .project-svc-item svg {
-  color: rgba(255,255,255,0.7);
+  color: #0A0A0A;
 }
 
 /* ---- Responsive ---- */
