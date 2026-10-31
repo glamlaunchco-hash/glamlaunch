@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="stylesheet" href="css/home.css"/>
+  <link rel="stylesheet" href="css/main.css?v=20261031b"/>
+  <link rel="stylesheet" href="css/home.css?v=20261031b"/>
   <link rel="icon" type="image/png" href="images/glamlaunch-favicon.png"/>
 </head>
 <body data-brand="glamlaunch">
@@ -151,7 +151,116 @@
   </div>
 </div>
 
-<!-- Latest Work -->
+<!-- Latest Work (styles inline so the section never renders unstyled) -->
+  <style id="work-showcase-css">
+    /* ---- Latest Work (auto-scrolling showcase) ---- */
+    .work-showcase {
+      background: #2b2b2e; /* dark charcoal */
+      padding: clamp(64px, 8vw, 104px) 0;
+      overflow: hidden;
+    }
+    .work-showcase-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .work-showcase .eyebrow { color: #E5328F; }
+    .work-showcase h2 {
+      color: #fff;
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      margin-top: 12px;
+    }
+    .work-showcase h2 em { color: #E5328F; }
+    .work-showcase-all {
+      flex-shrink: 0;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #fff;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .work-showcase-all:hover { color: #E5328F; border-color: #E5328F; }
+
+    .work-marquee {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+              mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    }
+    .work-track {
+      display: flex !important;
+      flex-wrap: nowrap;
+      width: max-content;
+      animation: work-scroll 48s linear infinite;
+    }
+    .work-marquee:hover .work-track,
+    .work-marquee:focus-within .work-track { animation-play-state: paused; }
+    @keyframes work-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* Each card carries its own right margin so the -50% loop point lines up exactly */
+    .work-card {
+      display: block;
+      flex: 0 0 auto;
+      width: clamp(280px, 30vw, 440px);
+      margin-right: 24px;
+      color: #fff;
+    }
+    .work-card-img {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #38383c;
+    }
+    .work-card-img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .work-card:hover .work-card-img img { transform: scale(1.04); }
+    .work-card-body { padding-top: 20px; }
+    .work-card-tag {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #E5328F;
+      margin-bottom: 8px;
+    }
+    .work-card h3 {
+      font-size: clamp(1.4rem, 2vw, 1.75rem);
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .work-card p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.6);
+    }
+
+    @media (max-width: 768px) {
+      .work-showcase-header { flex-direction: column; align-items: center; text-align: center; margin-bottom: 36px; }
+      .work-card { width: 78vw; max-width: 320px; margin-right: 16px; }
+      .work-track { animation-duration: 36s; }
+    }
+
+    /* Respect reduced motion: no auto-scroll, swipe/scroll instead */
+    @media (prefers-reduced-motion: reduce) {
+      .work-marquee { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-mask-image: none; mask-image: none; padding: 0 20px; }
+      .work-track { animation: none; }
+      .work-card { scroll-snap-align: start; }
+      .work-card[aria-hidden="true"] { display: none; }
+    }
+  </style>
 <section class="work-showcase" aria-labelledby="work-heading">
   <div class="container work-showcase-header reveal">
     <div>
@@ -417,6 +526,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20261031b"></script>
 </body>
 </html>
