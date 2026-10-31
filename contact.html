@@ -1,39 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-brand="glamlaunch">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | ProLaunch Creative Agency</title>
-  <meta name="description" content="Book a free consultation with ProLaunch. Let's get your business online with a custom website, social media strategy, or AI-powered digital avatar."/>
+  <title>Contact | GlamLaunch Creative Agency</title>
+  <meta name="description" content="Book a free brand consultation with GlamLaunch. Let's elevate your beauty brand with a luxury website, content and marketing that books clients."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
   <link rel="stylesheet" href="css/contact.css"/>
-  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
-  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+  <link rel="icon" type="image/png" href="images/glamlaunch-favicon.png"/>
 </head>
-<body>
+<body data-brand="glamlaunch">
 
-<!-- Brand Tabs -->
-<div class="brand-tabs">
-  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
-  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
-</div>
-
-<div id="page-loader" role="status" aria-label="Loading"><img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+<div id="page-loader" role="status" aria-label="Loading">
   <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/><div class="loader-bar"></div></div>
 <a href="#scheduler" class="float-book" aria-label="Book a call">Book a Call</a>
 
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <a href="index.html" class="nav-logo" aria-label="Home">
-    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
     <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
   </a>
-  <div class="brand-toggle">
-    <span class="brand-toggle-dot">&middot;</span>
-    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
-  </div>
   <ul class="nav-links" role="list">
     <li><a href="index.html" class="nav-link">Home</a></li>
     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -83,7 +71,7 @@
   <div class="search-modal">
     <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
     <div class="search-inner">
-      <input type="text" class="search-input" id="searchInput" placeholder="Search ProLaunch..." autocomplete="off"/>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search GlamLaunch..." autocomplete="off"/>
       <div class="search-suggestions" id="searchSuggestions">
         <span class="search-suggestion-label">Quick Links</span>
         <a href="services.html" class="search-suggestion">Services</a>
@@ -92,7 +80,7 @@
         <a href="services.html#app-dev" class="search-suggestion">App Development</a>
         <a href="portfolio.html" class="search-suggestion">Latest Work</a>
         <a href="contact.html" class="search-suggestion">Contact Us</a>
-        <a href="about.html" class="search-suggestion">About ProLaunch</a>
+        <a href="about.html" class="search-suggestion">About GlamLaunch</a>
       </div>
     </div>
   </div>
@@ -100,7 +88,6 @@
 
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
-  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
   <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
   <a href="contact.html" class="mobile-book-link">Book a Call &rarr;</a>
 </div>
@@ -108,8 +95,8 @@
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow reveal">Get In Touch</span>
-    <h1 class="reveal delay-1"><span data-brand-key="contact-hero-heading-1">Let's</span> <em data-brand-key="contact-hero-heading-em">Build</em><br/><span data-brand-key="contact-hero-heading-2">Your Business</span></h1>
-    <p class="reveal delay-2" data-brand-key="contact-hero-sub">Book a free consultation or send us a message. We'll get back to you within 24 hours.</p>
+    <h1 class="reveal delay-1"><span data-brand-key="contact-hero-heading-1">Let's</span> <em data-brand-key="contact-hero-heading-em">Elevate</em><br/><span data-brand-key="contact-hero-heading-2">Your Brand</span></h1>
+    <p class="reveal delay-2" data-brand-key="contact-hero-sub">Book a free brand consultation. We'll get back to you within 24 hours.</p>
   </div>
 </section>
 
@@ -177,7 +164,7 @@
         <div class="project-divider" style="background:var(--lime);width:60px;height:1px;margin:24px 0;"></div>
         <p>Pick a time that works for you and let's talk through your vision, your goals, and exactly how we'll bring your brand to life online. No pressure — just a conversation.</p>
         <div class="scheduler-meta">
-          <div class="scheduler-detail"><span class="scheduler-label">Email</span><span>prolaunchmedia@gmail.com</span></div>
+          <div class="scheduler-detail"><span class="scheduler-label">Email</span><span>glamlaunchco@gmail.com</span></div>
           <div class="scheduler-detail"><span class="scheduler-label">Duration</span><span>20 Minutes</span></div>
           <div class="scheduler-detail"><span class="scheduler-label">Format</span><span>Phone Call</span></div>
         </div>
@@ -199,14 +186,12 @@
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <a href="index.html" class="footer-logo">
-      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
       <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
     </a>
     <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
   </div>
-  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch. All rights reserved.</p></div>
 </footer>
-<script src="js/brand-content.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

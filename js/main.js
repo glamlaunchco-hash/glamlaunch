@@ -1,5 +1,5 @@
 /* ============================================================
-   PROLAUNCH — Main JS
+   GLAMLAUNCH — Main JS
    ============================================================ */
 
 // ---- Page Loader ----
@@ -117,7 +117,6 @@ let rotatingInterval = null;
 function startRotatingWords() {
   const el = document.querySelector('.rotating-word');
   if (!el) return;
-  stopRotatingWords();
   rotatingIdx = 0;
   el.textContent = ROTATING_WORDS[0];
   rotatingInterval = setInterval(() => {
@@ -129,104 +128,4 @@ function startRotatingWords() {
   }, 2000);
 }
 
-function stopRotatingWords() {
-  if (rotatingInterval) {
-    clearInterval(rotatingInterval);
-    rotatingInterval = null;
-  }
-}
-
-// ---- Brand Toggle ----
-function getCurrentBrand() {
-  return document.body.dataset.brand || document.documentElement.dataset.brand || 'prolaunch';
-}
-
-function getOtherBrand() {
-  return getCurrentBrand() === 'prolaunch' ? 'glamlaunch' : 'prolaunch';
-}
-
-function applyBrandContent(brand) {
-  if (typeof BRAND_CONTENT === 'undefined') return;
-  const content = BRAND_CONTENT[brand];
-  if (!content) return;
-  document.querySelectorAll('[data-brand-key]').forEach(el => {
-    const key = el.dataset.brandKey;
-    if (content[key] !== undefined) {
-      el.textContent = content[key];
-    }
-  });
-}
-
-function applyBrandImages(brand) {
-  if (typeof BRAND_IMAGES === 'undefined') return;
-  const images = BRAND_IMAGES[brand];
-  if (!images) return;
-  document.querySelectorAll('[data-brand-img]').forEach(el => {
-    const key = el.dataset.brandImg;
-    if (images[key]) {
-      el.src = images[key];
-    }
-  });
-}
-
-function toggleBrand() {
-  const newBrand = getOtherBrand();
-  if (newBrand === 'prolaunch') {
-    delete document.body.dataset.brand;
-    delete document.documentElement.dataset.brand;
-  } else {
-    document.body.dataset.brand = newBrand;
-    document.documentElement.dataset.brand = newBrand;
-  }
-  localStorage.setItem('prolaunch-brand', newBrand);
-  applyBrandContent(newBrand);
-  applyBrandImages(newBrand);
-  updateToggleLabels(newBrand);
-  if (newBrand === 'glamlaunch') {
-    startRotatingWords();
-  } else {
-    stopRotatingWords();
-  }
-}
-
-function updateToggleLabels(brand) {
-  const otherName = brand === 'prolaunch' ? 'GlamLaunch' : 'ProLaunch';
-  document.querySelectorAll('.brand-toggle-btn').forEach(btn => {
-    btn.textContent = otherName;
-  });
-  document.querySelectorAll('.mobile-brand-toggle').forEach(btn => {
-    btn.textContent = 'Switch to ' + otherName;
-  });
-}
-
-// Default brand from the current hostname — glamlaunch.co serves GlamLaunch,
-// prolaunchhq.com (or anything else) serves ProLaunch. localStorage still wins
-// so a visitor's last brand toggle is remembered across pages.
-function defaultBrandForHost() {
-  var h = (typeof location !== 'undefined' && location.hostname) ? location.hostname.toLowerCase() : '';
-  if (h.indexOf('glamlaunch.co') !== -1) return 'glamlaunch';
-  return 'prolaunch';
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('prolaunch-brand') || defaultBrandForHost();
-  if (saved === 'glamlaunch') {
-    document.body.dataset.brand = 'glamlaunch';
-    applyBrandContent('glamlaunch');
-    applyBrandImages('glamlaunch');
-    startRotatingWords();
-  }
-  updateToggleLabels(saved);
-  document.querySelectorAll('.brand-toggle-btn, .mobile-brand-toggle').forEach(btn => {
-    btn.addEventListener('click', toggleBrand);
-  });
-  // Also bind brand tab buttons
-  document.querySelectorAll('.brand-tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const isPro = btn.classList.contains('brand-tab--pro');
-      const current = getCurrentBrand();
-      if (isPro && current !== 'prolaunch') toggleBrand();
-      if (!isPro && current !== 'glamlaunch') toggleBrand();
-    });
-  });
-});
+document.addEventListener('DOMContentLoaded', startRotatingWords);

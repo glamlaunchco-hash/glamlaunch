@@ -1,39 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-brand="glamlaunch">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | ProLaunch Creative Agency</title>
-  <meta name="description" content="ProLaunch is a design and creative agency that helps entrepreneurs and small businesses launch and grow online with websites, social media, and AI-powered solutions."/>
+  <title>About | GlamLaunch Creative Agency</title>
+  <meta name="description" content="GlamLaunch is a creative agency for glam brands — beauty, fashion, lifestyle and wellness — combining premium design, brand marketing and AI-powered tools."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
   <link rel="stylesheet" href="css/about.css"/>
-  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
-  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+  <link rel="icon" type="image/png" href="images/glamlaunch-favicon.png"/>
 </head>
-<body>
+<body data-brand="glamlaunch">
 
-<!-- Brand Tabs -->
-<div class="brand-tabs">
-  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
-  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
-</div>
-
-<div id="page-loader" role="status" aria-label="Loading"><img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+<div id="page-loader" role="status" aria-label="Loading">
   <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/><div class="loader-bar"></div></div>
 <a href="contact.html" class="float-book" aria-label="Book a call">Book a Call</a>
 
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <a href="index.html" class="nav-logo" aria-label="Home">
-    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
     <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
   </a>
-  <div class="brand-toggle">
-    <span class="brand-toggle-dot">&middot;</span>
-    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
-  </div>
   <ul class="nav-links" role="list">
     <li><a href="index.html" class="nav-link">Home</a></li>
     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -83,7 +71,7 @@
   <div class="search-modal">
     <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
     <div class="search-inner">
-      <input type="text" class="search-input" id="searchInput" placeholder="Search ProLaunch..." autocomplete="off"/>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search GlamLaunch..." autocomplete="off"/>
       <div class="search-suggestions" id="searchSuggestions">
         <span class="search-suggestion-label">Quick Links</span>
         <a href="services.html" class="search-suggestion">Services</a>
@@ -92,7 +80,7 @@
         <a href="services.html#app-dev" class="search-suggestion">App Development</a>
         <a href="portfolio.html" class="search-suggestion">Latest Work</a>
         <a href="contact.html" class="search-suggestion">Contact Us</a>
-        <a href="about.html" class="search-suggestion">About ProLaunch</a>
+        <a href="about.html" class="search-suggestion">About GlamLaunch</a>
       </div>
     </div>
   </div>
@@ -100,15 +88,14 @@
 
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
-  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
   <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
   <a href="contact.html" class="mobile-book-link">Book a Call &rarr;</a>
 </div>
 
 <section class="page-hero">
   <div class="container">
-    <h1 class="reveal delay-1"><span data-brand-key="about-hero-heading-1">The Agency Behind</span><br/>Your <em data-brand-key="about-hero-heading-em">Growth</em></h1>
-    <p class="reveal delay-2" data-brand-key="about-hero-sub">We exist to make getting online simple, fast, and beautiful.</p>
+    <h1 class="reveal delay-1"><span data-brand-key="about-hero-heading-1">The Agency Behind</span><br/>Your <em data-brand-key="about-hero-heading-em">Glow</em></h1>
+    <p class="reveal delay-2" data-brand-key="about-hero-sub">We exist to make glam brands look stunning online.</p>
   </div>
 </section>
 
@@ -116,13 +103,13 @@
   <div class="container">
     <div class="about-row">
       <div class="about-img reveal">
-        <img src="images/about-entrepreneur.jpg" alt="ProLaunch team" loading="lazy" data-brand-img="about-photo"/>
+        <img src="images/glam-about.webp" alt="GlamLaunch team" loading="lazy" data-brand-img="about-photo"/>
       </div>
       <div class="about-content reveal delay-1">
         <span class="eyebrow">Our Story</span>
-        <h2><span data-brand-key="about-story-h2-1">We've Been Where</span> <em data-brand-key="about-story-h2-em">You Are</em></h2>
-        <p data-brand-key="about-story-p1">ProLaunch was born from a simple frustration: getting a business online shouldn't be this hard. Too many entrepreneurs spend months trying to figure out websites, social media, and marketing — time they should be spending on their business.</p>
-        <p data-brand-key="about-story-p2">We built ProLaunch to change that. We combine premium design, strategic marketing, and AI-powered tools to get businesses launched and growing — fast. No jargon, no delays, no cookie-cutter solutions.</p>
+        <h2><span data-brand-key="about-story-h2-1">We Know</span> <em data-brand-key="about-story-h2-em">Glam</em></h2>
+        <p data-brand-key="about-story-p1">GlamLaunch was born from a passion for glam brands — beauty, fashion, lifestyle, and wellness. Too many talented entrepreneurs are held back by a weak online presence.</p>
+        <p data-brand-key="about-story-p2">We built GlamLaunch to change that. We combine premium design, brand marketing expertise, and AI-powered tools to get glam brands seen, booked, and growing.</p>
       </div>
     </div>
   </div>
@@ -157,8 +144,8 @@
 <section class="cta-banner" aria-label="Call to action">
   <div class="container">
     <div class="cta-inner reveal">
-      <h2>Ready to Work <em data-brand-key="about-cta-heading-em">Together?</em></h2>
-      <p data-brand-key="about-cta-sub">Let's build something great for your business.</p>
+      <h2>Ready to Work <em data-brand-key="about-cta-heading-em">Glow Up?</em></h2>
+      <p data-brand-key="about-cta-sub">Let's build something stunning for your brand.</p>
       <a href="contact.html" class="btn-primary">Book a Call</a>
     </div>
   </div>
@@ -167,14 +154,12 @@
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <a href="index.html" class="footer-logo">
-      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
       <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
     </a>
     <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
   </div>
-  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch. All rights reserved.</p></div>
 </footer>
-<script src="js/brand-content.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

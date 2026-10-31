@@ -1,5 +1,5 @@
 /* ============================================================
-   PROLAUNCH — Home Page Styles
+   GLAMLAUNCH — Home Page Styles
    ============================================================ */
 
 /* ---- Hero ---- */
@@ -85,7 +85,7 @@
   100% { opacity: 1; color: #E5328F; }
 }
 
-/* "Fast." on ProLaunch — italic lime green with white-to-lime fade */
+/* Hero accent word — italic with white-to-accent fade */
 .hero-accent-word {
   color: var(--lime);
   animation: whiteToLime 2.5s ease forwards;
@@ -111,7 +111,7 @@
   display: none;
 }
 
-/* ProLaunch: hide the rotating word em when empty */
+/* Hide the rotating word em when empty */
 .rotating-word:empty { display: none; }
 .rotating-word-wrap:has(.rotating-word:empty) { display: none; }
 .hero-headline-suffix:empty { display: none; }
@@ -284,7 +284,7 @@
   color: var(--grey-dark);
 }
 
-/* ---- Why ProLaunch ---- */
+/* ---- Why GlamLaunch ---- */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
