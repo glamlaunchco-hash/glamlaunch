@@ -8,10 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/main.css?v=20261031k"/>
-  <link rel="stylesheet" href="css/project.css?v=20261031k"/>
-  <link rel="stylesheet" href="css/lwl.css?v=20261031k"/>
-  <link rel="stylesheet" href="css/melanu.css?v=20261031k"/>
+  <link rel="stylesheet" href="css/main.css?v=20261031l"/>
+  <link rel="stylesheet" href="css/project.css?v=20261031l"/>
+  <link rel="stylesheet" href="css/lwl.css?v=20261031l"/>
+  <link rel="stylesheet" href="css/melanu.css?v=20261031l"/>
   <link rel="icon" type="image/png" href="images/glamlaunch-favicon.png"/>
 </head>
 <body data-brand="glamlaunch">
@@ -103,10 +103,8 @@
   </div>
 </section>
 
-<!-- Summary — full-bleed with Tashara + laptop background -->
+<!-- Summary -->
 <section class="lwl-summary">
-  <div class="lwl-summary-bg" style="background-image:url('images/lwl/hero.png');"></div>
-  <div class="lwl-summary-overlay"></div>
   <div class="lwl-summary-inner reveal">
     <span class="eyebrow">What We Did</span>
     <h2>Website Development for <em>Loud Women&nbsp;Lead</em></h2>
@@ -129,18 +127,9 @@
 <style>
   .lwl-summary {
     position: relative;
-    padding: 140px 24px;
-    overflow: hidden;
-    color: #fff;
-  }
-  .lwl-summary-bg {
-    position: absolute; inset: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  .lwl-summary-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.78) 100%);
+    padding: clamp(80px, 10vw, 120px) 24px;
+    background: #fff;
+    color: #1d1d1f;
   }
   .lwl-summary-inner {
     position: relative; z-index: 2;
@@ -155,7 +144,7 @@
     font-weight: 500;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: var(--lime, #d8f56b);
+    color: #E5328F;
     margin-bottom: 18px;
   }
   .lwl-summary-inner h2 {
@@ -164,14 +153,14 @@
     font-size: clamp(2rem, 4.5vw, 3.5rem);
     line-height: 1.1;
     margin: 0 0 26px;
-    color: #fff;
+    color: #1d1d1f;
   }
-  .lwl-summary-inner h2 em { font-style: italic; font-weight: 300; }
+  .lwl-summary-inner h2 em { font-style: italic; font-weight: 300; color: #E5328F; }
   .lwl-summary-inner p {
     font-family: 'Jost', sans-serif;
     font-size: 1.05rem;
     line-height: 1.75;
-    color: rgba(255,255,255,0.82);
+    color: #4a4a4f;
     margin: 0 0 8px;
     max-width: 640px;
   }
@@ -181,7 +170,7 @@
     font-family: 'Jost', sans-serif;
   }
   @media (max-width: 760px) {
-    .lwl-summary { padding: 100px 22px; }
+    .lwl-summary { padding: 72px 22px; }
   }
 </style>
 
@@ -206,7 +195,7 @@
   </div>
   <div class="footer-bottom"><p>&copy; 2026 GlamLaunch. All rights reserved.</p></div>
 </footer>
-<script src="js/main.js?v=20261031k"></script>
+<script src="js/main.js?v=20261031l"></script>
 <script>
   // View Site button -> video modal overlay
   (function() {
