@@ -49,7 +49,7 @@
 
 /* Description section below — centered, dark brown text */
 .melanu-whatwedid-desc {
-  background: #c99b76;
+  background: #fff;
   padding: clamp(48px, 6vw, 80px) 0;
   text-align: center;
 }
@@ -59,6 +59,9 @@
 .melanu-whatwedid-desc h2,
 .melanu-whatwedid-desc h2 em {
   color: #3a2010;
+}
+.melanu-whatwedid-desc h2 {
+  margin-bottom: 24px;
 }
 .melanu-whatwedid-desc .eyebrow {
   color: #3a2010;
@@ -252,7 +255,7 @@
 
 /* ---- GlamLaunch overrides ---- */
 [data-brand="glamlaunch"] .melanu-whatwedid-desc {
-  background: #c99b76;
+  background: #fff;
 }
 [data-brand="glamlaunch"] .melanu-services-row {
   background: #c99b76;
