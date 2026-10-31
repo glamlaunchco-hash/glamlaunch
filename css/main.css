@@ -377,10 +377,13 @@ p  { font-size: clamp(0.93rem, 1.1vw, 1.05rem); color: var(--muted); line-height
   justify-self: end;
 }
 .footer-social a {
+  display: inline-flex;
+  align-items: center;
   color: var(--muted);
   font-size: 1.2rem;
   transition: color 0.3s;
 }
+.footer-social svg { display: block; }
 .footer-social a:hover { color: var(--lime); }
 
 .footer-bottom {
