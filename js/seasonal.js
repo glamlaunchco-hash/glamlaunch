@@ -42,7 +42,27 @@
   function rnd(a, b) { return a + Math.random() * (b - a); }
   function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
 
+  var LEAVES_CSS = '.leaves{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:50}' +
+    '.leaves span{position:absolute;top:-10%;font-size:1.5rem;animation:fall 10s linear infinite}' +
+    '.leaves span:nth-child(1){left:10%;animation-duration:9s;animation-delay:-2s}' +
+    '.leaves span:nth-child(2){left:30%;animation-duration:12s;animation-delay:-6s}' +
+    '.leaves span:nth-child(3){left:50%;animation-duration:10s;animation-delay:-4s}' +
+    '.leaves span:nth-child(4){left:70%;animation-duration:13s;animation-delay:-8s}' +
+    '.leaves span:nth-child(5){left:90%;animation-duration:11s;animation-delay:-1s}' +
+    '@keyframes fall{0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}10%{opacity:1}' +
+    '50%{transform:translateY(55vh) translateX(30px) rotate(180deg)}' +
+    '100%{transform:translateY(110vh) translateX(-25px) rotate(360deg);opacity:.8}}';
+
+  function startLeaves() {
+    if (document.getElementById('gl-season')) return;
+    var st = document.createElement('style'); st.textContent = LEAVES_CSS; document.head.appendChild(st);
+    var box = document.createElement('div'); box.id = 'gl-season'; box.className = 'leaves'; box.setAttribute('aria-hidden', 'true');
+    box.innerHTML = '<span>\uD83C\uDF41</span><span>\uD83C\uDF42</span><span>\uD83C\uDF41</span><span>\uD83C\uDF42</span><span>\uD83C\uDF41</span>';
+    document.body.appendChild(box);
+  }
+
   function start() {
+    if (theme === 'leaves') return startLeaves();
     if (document.getElementById('gl-season')) return;
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     var box = document.createElement('div'); box.id = 'gl-season'; box.className = theme; box.setAttribute('aria-hidden', 'true');
