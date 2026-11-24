@@ -57,7 +57,15 @@
     if (document.getElementById('gl-season')) return;
     var st = document.createElement('style'); st.textContent = LEAVES_CSS; document.head.appendChild(st);
     var box = document.createElement('div'); box.id = 'gl-season'; box.className = 'leaves'; box.setAttribute('aria-hidden', 'true');
-    box.innerHTML = '<span>\uD83C\uDF41</span><span>\uD83C\uDF42</span><span>\uD83C\uDF41</span><span>\uD83C\uDF42</span><span>\uD83C\uDF41</span>';
+    var maple = '<svg viewBox="0 0 24 24" width="1em" height="1em" style="display:block;overflow:visible"><defs><linearGradient id="glMg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2672A"/><stop offset="1" stop-color="#C9281B"/></linearGradient></defs>' +
+      '<path d="M12 16.6c.1 2.4-.1 4.4-.9 6.4" stroke="#8F2416" stroke-width=".55" fill="none" stroke-linecap="round"/>' +
+      '<path fill="url(#glMg)" d="M12 1.5l1.7 3.9 2.7-1.5-.6 4.2 3.6-1.7-1.1 3.4 2.8 1.1-4.4 3.6.9 1.9-4.4-.6L12 17.2l-1.2-1.4-4.4.6.9-1.9-4.4-3.6 2.8-1.1-1.1-3.4 3.6 1.7-.6-4.2 2.7 1.5z"/>' +
+      '<path d="M12 16.8V4.5M12 12.6l5.6-3M12 12.6L6.4 9.6M12 14.6l3.6.8M12 14.6l-3.6.8" stroke="#A3241A" stroke-width=".4" fill="none" stroke-linecap="round" opacity=".8"/></svg>';
+    var fallen = '<svg viewBox="0 0 24 24" width="1em" height="1em" style="display:block;overflow:visible"><defs><linearGradient id="glFg" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0913A"/><stop offset="1" stop-color="#9A4E1F"/></linearGradient></defs>' +
+      '<path d="M5.8 17.8c-1.1 1.4-2.2 2.6-3.5 3.7" stroke="#6E3815" stroke-width=".55" fill="none" stroke-linecap="round"/>' +
+      '<path fill="url(#glFg)" d="M19.5 2.8C10.6 3.2 4.8 8.6 5.4 18.2c9-.3 14.6-5.9 14.1-15.4z"/>' +
+      '<path d="M5.9 17.6C9.6 13.4 13.5 8.6 17.9 4.4M9 14.2l-1.2-3.4M11.6 11.2l-.6-3.6M9 14.2l3.6.6M11.6 11.2l3.6.2" stroke="#7A3D17" stroke-width=".4" fill="none" stroke-linecap="round" opacity=".75"/></svg>';
+    box.innerHTML = '<span>' + maple + '</span><span>' + fallen + '</span><span>' + maple + '</span><span>' + fallen + '</span><span>' + maple + '</span>';
     document.body.appendChild(box);
   }
 
